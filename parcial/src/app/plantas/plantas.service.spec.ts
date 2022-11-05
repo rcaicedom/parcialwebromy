@@ -4,10 +4,10 @@ import { PlantasService } from './plantas.service';
 
 describe('PlantasService', () => {
   let service: PlantasService;
-
+  let httpClientSpy: {get: jasmine.Spy};
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(PlantasService);
+    httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+    service = new PlantasService(httpClientSpy as any)
   });
 
   it('should be created', () => {
