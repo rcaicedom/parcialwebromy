@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PlantasComponent } from './plantas/plantas.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlantasComponent
+    PlantasComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
